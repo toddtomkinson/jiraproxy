@@ -1,0 +1,27 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    daemons (1.1.3)
+    eventmachine (0.12.10)
+    handsoap (1.1.8)
+    jiraSOAP (0.7.1)
+      handsoap (~> 1.1.8)
+      nokogiri (~> 1.4.4)
+    nokogiri (1.4.4)
+    rack (1.3.0)
+    sinatra (1.2.6)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    thin (1.2.11)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    tilt (1.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  jiraSOAP
+  sinatra
+  thin

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'> 
+  <head> 
+    <title>Sample jiraproxy form</title> 
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' /> 
+  </head> 
+  <body>
+    <h1>New Account</h1> 
+    <div> 
+      <form action='http://localhost:9200/jira/projects/ProjectKey/issues' method='post'>
+        <input name='jira_url' type='hidden' value='https://jirahost/jira' />
+        <input name='redirect_url' type='hidden' value='http://www.google.com' /> 
+        <input name='type_id' type='hidden' value='4' /> 
+        <input name='priority_id' type='hidden' value='3' /> 
+        <input name='summary' type='hidden' value='New account: %username%' /> 
+        <input name='description' type='hidden' value='Create a new account.
+
+Full name:  %full_name%
+
+Username:  %username%
+
+Groups:
+%groups_newline%' />
+        <p>
+          <label for='full_name'>Full Name:</label>
+          <br/>
+          <input id='full_name' name='full_name' style='width: 500px' type='text' />
+        </p>
+        <p>
+          <label for='username'>Username:</label>
+          <br/>
+          <input id='username' name='username' style='width: 500px' type='text' />
+        </p>
+        <p>
+          <span>Which applications do we need to put on the domain?</span>
+          <br/>
+          <input type='checkbox' id='groups_group1', name='groups[]' value='Group 1'/>
+          <label for='groups_group1'>Group 1</label>
+          <br/>
+          <input type='checkbox' id='groups_group2', name='groups[]' value='Group 2'/>
+          <label for='groups_group2'>Group 2</label>
+          <br/>
+          <input type='checkbox' id='groups_group3', name='groups[]' value='Group 3'/>
+          <label for='groups_group3'>Group 3</label>
+        </p>
+        <input type='submit' value='Create' /> 
+      </form>
+    </div>
+  </body> 
+</html> 
